@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>olive-springboot</groupId>
+    <groupId>org.spring</groupId>
     <artifactId>olive-springboot</artifactId>
     <version>0.0.1</version>
-    <name>springboot-mybatis</name>
+    <name>olive-springboot</name>
     <packaging>war</packaging>
 
     <!-- Spring Boot 启动父依赖 -->
