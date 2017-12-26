@@ -10,17 +10,17 @@ import org.springframework.stereotype.Service;
 
 /**
  * 用户业务实现层
- *
- * Created by lyun on 07/07/2017.
+ * @author olive
+ * on 07/07/2017.
  */
 @Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserDao userDao; // 主数据源
+    private UserDao userDao;
 
     @Autowired
-    private CityDao cityDao; // 从数据源
+    private CityDao cityDao;
 
     @Override
     public User findByName(String userName) {

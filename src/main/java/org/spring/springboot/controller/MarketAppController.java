@@ -2,7 +2,7 @@ package org.spring.springboot.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.spring.springboot.utils.JSONUtil;
+import org.spring.springboot.utils.JsonUtil;
 import org.spring.springboot.utils.MapUtils;
 import org.spring.springboot.utils.Status;
 import org.spring.springboot.utils.StringUtils;
@@ -88,7 +88,7 @@ public class MarketAppController {
         }finally {
             result.put("data", rmap);
         }
-        return JSONUtil.beanToJson(result);
+        return JsonUtil.beanToJson(result);
     }
 
 }

@@ -6,8 +6,8 @@ import org.spring.springboot.domain.City;
 
 /**
  * 城市 DAO 接口类
- *
- * Created by lyun on 07/07/2017.
+ * @author olive
+ * on 07/07/2017.
  */
 @Mapper
 public interface CityDao {

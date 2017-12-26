@@ -11,8 +11,9 @@ import java.util.regex.Pattern;
 /**
  * 
  * JSON工具类
+ * @author olive
  */
-public class JSONUtil {
+public class JsonUtil {
 
 	private static Pattern NUMBER_PATTERN = Pattern.compile("^[-\\+]?[\\d]*$");
 
@@ -23,7 +24,7 @@ public class JSONUtil {
 	 * @return
 	 */
 	public static Map<String, String> beanToMap(Object javaBean) {
-		Map<String, String> result = new HashMap<String, String>();
+		Map<String, String> result = new HashMap<String, String>(16);
 		Method[] methods = javaBean.getClass().getDeclaredMethods();
 
 		for (Method method : methods) {
@@ -51,7 +52,7 @@ public class JSONUtil {
 	 */
 	@SuppressWarnings("unchecked")
 	public static Map<String, String> jsonToMap(JSONObject jsonObject) {
-		Map<String, String> result = new HashMap<String, String>();
+		Map<String, String> result = new HashMap<String, String>(16);
 		Iterator<String> iterator = jsonObject.keys();
 		String key = null;
 		String value = null;
@@ -68,7 +69,7 @@ public class JSONUtil {
 	 * @return
 	 */
 	public static Map<String, Object> parseJSON2Map(String jsonStr) {
-		Map<String, Object> map = new HashMap<String, Object>();
+		Map<String, Object> map = new HashMap<String, Object>(16);
 		// 最外层解析
 		JSONObject json = JSONObject.fromObject(jsonStr);
 		for (Object k : json.keySet()) {

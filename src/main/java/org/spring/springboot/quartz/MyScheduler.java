@@ -10,6 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import org.springframework.stereotype.Component;
 
+/**
+ * 定时器
+ * @author olive
+ * on 07/07/2017.
+ */
 @Component
 public class MyScheduler {
 	

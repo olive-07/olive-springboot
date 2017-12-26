@@ -2,8 +2,8 @@ package org.spring.springboot.domain;
 
 /**
  * 用户实体类
- *
- * Created by lyun on 07/07/2017.
+ * @author olive
+ * on 07/07/2017.
  */
 public class User {
 

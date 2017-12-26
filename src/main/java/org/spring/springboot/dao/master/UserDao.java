@@ -7,7 +7,8 @@ import org.spring.springboot.domain.User;
 /**
  * 用户 DAO 接口类
  *
- * Created by lyun on 07/07/2017.
+ * @author olive
+ * on 07/07/2017.
  */
 @Mapper
 public interface UserDao {

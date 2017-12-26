@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * 获取map
- * @author gaoyuhai
+ * @author olive
  * 2016-11-18 下午06:02:52
  */
 public class MapUtils {

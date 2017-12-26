@@ -9,10 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Spring Boot 应用启动类
- *
- * Created by lyun on 07/07/2017.
+ * @author olive
+ * on 07/07/2017.
  */
-// Spring Boot 应用的标识
 @SpringBootApplication
 public class Application {
     private static Logger logger = LoggerFactory.getLogger(Application.class);

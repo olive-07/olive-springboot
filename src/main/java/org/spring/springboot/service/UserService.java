@@ -4,8 +4,8 @@ import org.spring.springboot.domain.User;
 
 /**
  * 用户业务接口层
- *
- * Created by lyun on 07/07/2017.
+ * @author olive
+ * on 07/07/2017.
  */
 public interface UserService {
 

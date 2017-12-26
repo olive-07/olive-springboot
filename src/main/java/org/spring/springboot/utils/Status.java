@@ -1,6 +1,9 @@
 package org.spring.springboot.utils;
 /**
- *定义返回状态 
+ *
+ * 定义返回状态
+ * @author olive
+ * 
  * */
 public enum Status {
 
