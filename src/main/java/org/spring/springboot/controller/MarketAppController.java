@@ -28,15 +28,15 @@ public class MarketAppController {
     private static Logger logger = LoggerFactory.getLogger(MarketAppController.class);
     private final static String CHANNEL_ANDROID = "android";
     @Value("${LOW_VERSION_CODE}")
-    private String LOW_VERSION_CODE;
+    private String lowVersionCode;
     @Value("${HIGH_VERSION_CODE}")
-    private String HIGH_VERSION_CODE;
+    private String highVersionCode;
     @Value("${HIGH_VERSION_NAME}")
-    private String HIGH_VERSION_NAME;
+    private String highVersionName;
     @Value("${MARKET_APP_DOWNLOAD_URL}")
-    private String MARKET_APP_DOWNLOAD_URL;
+    private String marketAppDownloadUrl;
     @Value("${MARKET_APP_UPDATE_REMARK}")
-    private String MARKET_APP_UPDATE_REMARK;
+    private String marketAppUpdateRemark;
 
     /**
      * 版本控制
@@ -50,7 +50,7 @@ public class MarketAppController {
 
         logger.info("checkVersionMarketApp appVersionCode:{} channel:{}", appVersionCode, channel);
         Map<String, Object> result = MapUtils.getResultMap(Status.SUCCESS.getName(), Status.SUCCESS.getValue());
-        Map<String, Object> rmap = new HashMap(16);
+        Map<String, Object> rmap = new HashMap<>(16);
         rmap.put("type", 0);
         try {
             if(StringUtils.isNotBlank(appVersionCode) && StringUtils.isNotBlank(channel)){
@@ -60,9 +60,9 @@ public class MarketAppController {
                 int high = 0;
                 if(CHANNEL_ANDROID.equals(channel)){
 
-                    if(StringUtils.isInteger(LOW_VERSION_CODE) && StringUtils.isInteger(HIGH_VERSION_CODE)){
-                        low = Integer.valueOf(LOW_VERSION_CODE);
-                        high = Integer.valueOf(HIGH_VERSION_CODE);
+                    if(StringUtils.isInteger(lowVersionCode) && StringUtils.isInteger(highVersionCode)){
+                        low = Integer.valueOf(lowVersionCode);
+                        high = Integer.valueOf(highVersionCode);
                     }else{
                         MapUtils.setResultMap(result, Status.FAILD.getName(), "后台版本code值配置错误!");
                     }
@@ -74,9 +74,9 @@ public class MarketAppController {
                     //提醒更新
                     rmap.put("type", 2);
                 }
-                rmap.put("newVersionName", (HIGH_VERSION_NAME == null?"":HIGH_VERSION_NAME));
-                rmap.put("url", (MARKET_APP_DOWNLOAD_URL == null?"":MARKET_APP_DOWNLOAD_URL));
-                rmap.put("descr", (MARKET_APP_UPDATE_REMARK == null?"":MARKET_APP_UPDATE_REMARK));
+                rmap.put("newVersionName", (highVersionName == null?"": highVersionName));
+                rmap.put("url", (marketAppDownloadUrl == null?"": marketAppDownloadUrl));
+                rmap.put("descr", (marketAppUpdateRemark == null?"":marketAppUpdateRemark));
                 rmap.put("newVersionCode", high);
 
             }else{
