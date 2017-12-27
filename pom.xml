@@ -5,8 +5,8 @@
 
     <groupId>org.spring</groupId>
     <artifactId>olive-springboot</artifactId>
-    <version>0.0.1</version>
     <name>olive-springboot</name>
+    <version>0.0.1</version>
     <packaging>war</packaging>
 
     <!-- Spring Boot 启动父依赖 -->
@@ -15,10 +15,21 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.1.RELEASE</version>
     </parent>
+
     <properties>
-        <mybatis-spring-boot>1.2.0</mybatis-spring-boot>
-        <mysql-connector>5.1.39</mysql-connector>
-        <druid>1.0.18</druid>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <mybatis-spring-boot>1.3.1</mybatis-spring-boot>
+        <mysql.connector.version>5.1.44</mysql.connector.version>
+        <druid.spring.version>1.1.5</druid.spring.version>
+        <junit.version>4.12</junit.version>
+        <quartz.version>2.2.1</quartz.version>
+        <alibaba.fastjson.version>1.2.38</alibaba.fastjson.version>
+        <json-lib.version>2.4</json-lib.version>
+        <ezmorph.version>1.0.6</ezmorph.version>
+        <google.code.gson.version>2.7</google.code.gson.version>
+        <jsoup.version>1.10.3</jsoup.version>
+        <googlecode.json-simple.version>1.1.1</googlecode.json-simple.version>
     </properties>
 
     <dependencies>
@@ -60,21 +71,21 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector}</version>
+            <version>${mysql.connector.version}</version>
         </dependency>
 
         <!-- Druid 数据连接池依赖 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>${druid}</version>
+            <version>${druid.spring.version}</version>
         </dependency>
 
         <!-- Junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.version}</version>
         </dependency>
         <!-- quartz 实现 -->
         <dependency> 
@@ -88,40 +99,40 @@
         <dependency> 
 		    <groupId>org.quartz-scheduler</groupId>
 		    <artifactId>quartz</artifactId>
-		    <version>2.2.1</version>
+		    <version>${quartz.version}</version>
 		</dependency>
 
         <!-- json -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.38</version>
+            <version>${alibaba.fastjson.version}</version>
         </dependency>
         <dependency>
             <groupId>net.sf.json-lib</groupId>
             <artifactId>json-lib</artifactId>
-            <version>2.4</version>
+            <version>${json-lib.version}</version>
             <classifier>jdk15</classifier>
         </dependency>
         <dependency>
             <groupId>net.sf.ezmorph</groupId>
             <artifactId>ezmorph</artifactId>
-            <version>1.0.6</version>
+            <version>${ezmorph.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.7</version>
+            <version>${google.code.gson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>1.10.3</version>
+            <version>${jsoup.version}</version>
         </dependency>
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
-            <version>1.1.1</version>
+            <version>${googlecode.json-simple.version}</version>
         </dependency>
 		
 		<!-- log4j2 日志 -->
