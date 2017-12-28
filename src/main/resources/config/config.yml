@@ -1,0 +1,24 @@
+######阿里云OSS配置#######
+#endPoint
+END_POINT: http://oss-cn-hangzhou.aliyuncs.com
+#accessKeyId
+ACCESS_KEY_ID: LTAIuPy3KPizG9OL
+#accessKeySecret
+ACCESS_KEY_SECRET: xX1Qyqc35QJBcXVmMzyrDSulbcxaKI
+#bucketName
+BUCKET_NAME: xjzx-qa-message
+#文件访问域名
+APP_OSS_URL: http://msg.qa.51xjzx.com
+
+######极光推送配置#######
+APP_KEY: dbe3a3d73974bf4df86b084f
+MASTER_SECRET: 4626d1dc8b36491ad2f15bda
+#离线消息时长，秒为单位。默认1天，最长10天
+TIME_TO_LIVE: 86400
+#推送的apns环境，false表示开发，true表示生产
+APNS_PRODUCTION: false
+#推送尝试次数
+RETRY_NUM: 3
+
+######消息通知详情页#######
+NOTICE_MSG_URL: http://h5.qa.51xjzx.com/msg-detail

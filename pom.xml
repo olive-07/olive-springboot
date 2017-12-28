@@ -30,6 +30,8 @@
         <google.code.gson.version>2.7</google.code.gson.version>
         <jsoup.version>1.10.3</jsoup.version>
         <googlecode.json-simple.version>1.1.1</googlecode.json-simple.version>
+        <aliyun.sdk.oss.version>2.0.3</aliyun.sdk.oss.version>
+        <commons.io.version>2.5</commons.io.version>
     </properties>
 
     <dependencies>
@@ -145,11 +147,23 @@
 	                <artifactId>spring-boot-starter-logging</artifactId>
 	            </exclusion>
 	        </exclusions>
-	     </dependency>
-	     <dependency>
+        </dependency>
+        <dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-log4j2</artifactId>
-		 </dependency>
+        </dependency>
 
+        <!-- 阿里云OSS -->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>${aliyun.sdk.oss.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons.io.version}</version>
+        </dependency>
     </dependencies>
 </project>
