@@ -1,7 +1,7 @@
 package org.spring.springboot.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.spring.springboot.utils.JsonUtil;
 import org.spring.springboot.utils.MapUtils;
 import org.spring.springboot.utils.Status;
@@ -25,7 +25,7 @@ import java.util.Map;
 @Configuration
 public class MarketAppController {
 
-    private static Logger logger = LoggerFactory.getLogger(MarketAppController.class);
+    private static Logger logger = LogManager.getLogger(MarketAppController.class.getName());
     private final static String CHANNEL_ANDROID = "android";
     @Value("${LOW_VERSION_CODE}")
     private String lowVersionCode;

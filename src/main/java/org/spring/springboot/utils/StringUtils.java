@@ -3,8 +3,8 @@
  */
 package org.spring.springboot.utils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.UnsupportedEncodingException;
 import java.util.regex.Matcher;
@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
  */
 public class StringUtils extends org.apache.commons.lang.StringUtils {
 
-	private static final Logger logger = LoggerFactory.getLogger(StringUtils.class);
+	private static final Logger logger = LogManager.getLogger(StringUtils.class.getName());
 	private static final char SEPARATOR = '_';
 	private static final String CHARSET_NAME = "UTF-8";
 	private static Pattern NUMBER_PATTERN = Pattern.compile("^[+-]?[0-9]+$");
