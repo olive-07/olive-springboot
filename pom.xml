@@ -174,5 +174,11 @@
             <version>${spring-boot-starter-redis-version}</version>
         </dependency>
 
+        <!-- rabbit mq -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
     </dependencies>
 </project>
