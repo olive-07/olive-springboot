@@ -1,4 +1,4 @@
-package org.spring.springboot.constant;
+package org.spring.springboot.web.constant;
 
 
 /**

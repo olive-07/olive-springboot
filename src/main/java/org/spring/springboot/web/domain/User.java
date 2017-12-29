@@ -1,4 +1,4 @@
-package org.spring.springboot.domain;
+package org.spring.springboot.web.domain;
 
 /**
  * 用户实体类

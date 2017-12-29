@@ -1,8 +1,9 @@
-package org.spring.springboot.controller;
+package org.spring.springboot.web.controller;
 
+import org.spring.springboot.config.jediscluster.service.JedisClusterService;
 import org.spring.springboot.config.redis.service.RedisService;
-import org.spring.springboot.domain.User;
-import org.spring.springboot.service.UserService;
+import org.spring.springboot.web.domain.User;
+import org.spring.springboot.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,6 +22,8 @@ public class UserRestController {
     private UserService userService;
     @Autowired
     private RedisService redisService;
+    @Autowired
+    private JedisClusterService jedisClusterService;
 
     /**
      * 根据用户名获取用户信息，包括从库的地址信息
@@ -39,9 +42,21 @@ public class UserRestController {
      * @return
      */
     @RequestMapping(value = "/api/redis/test", method = RequestMethod.GET)
-    public String findByName() {
+    public String redisTest() {
 
         redisService.add("redis_test","112312312");
         return (String)redisService.get("redis_test");
+    }
+
+    /**
+     * 集群redis测试
+     *
+     * @return
+     */
+    @RequestMapping(value = "/api/jedisCluster/test", method = RequestMethod.GET)
+    public String jedisClusterTest() {
+
+        jedisClusterService.set("", "jedisCluster_test", "1231223112312312");
+        return jedisClusterService.get("", "jedisCluster_test");
     }
 }

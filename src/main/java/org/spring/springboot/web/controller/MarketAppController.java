@@ -1,14 +1,11 @@
-package org.spring.springboot.controller;
+package org.spring.springboot.web.controller;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.spring.springboot.config.redis.service.RedisService;
-import org.spring.springboot.service.UserService;
 import org.spring.springboot.utils.JsonUtil;
 import org.spring.springboot.utils.MapUtils;
 import org.spring.springboot.utils.Status;
 import org.spring.springboot.utils.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;

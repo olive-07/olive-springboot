@@ -1,10 +1,10 @@
-package org.spring.springboot.service.impl;
+package org.spring.springboot.web.service.impl;
 
-import org.spring.springboot.dao.cluster.CityDao;
-import org.spring.springboot.dao.master.UserDao;
-import org.spring.springboot.domain.City;
-import org.spring.springboot.domain.User;
-import org.spring.springboot.service.UserService;
+import org.spring.springboot.web.dao.cluster.CityDao;
+import org.spring.springboot.web.dao.master.UserDao;
+import org.spring.springboot.web.domain.City;
+import org.spring.springboot.web.domain.User;
+import org.spring.springboot.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

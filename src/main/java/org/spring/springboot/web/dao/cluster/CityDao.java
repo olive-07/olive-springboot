@@ -1,8 +1,8 @@
-package org.spring.springboot.dao.cluster;
+package org.spring.springboot.web.dao.cluster;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.spring.springboot.domain.City;
+import org.spring.springboot.web.domain.City;
 
 /**
  * 城市 DAO 接口类

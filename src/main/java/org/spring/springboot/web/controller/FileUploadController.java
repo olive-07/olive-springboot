@@ -1,13 +1,12 @@
-package org.spring.springboot.controller;
+package org.spring.springboot.web.controller;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.spring.springboot.config.oss.OssConfig;
-import org.spring.springboot.constant.ConstantCommon;
-import org.spring.springboot.domain.User;
-import org.spring.springboot.service.AliOssService;
 import org.spring.springboot.utils.AliOssUtil;
+import org.spring.springboot.web.constant.ConstantCommon;
+import org.spring.springboot.web.service.AliOssService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

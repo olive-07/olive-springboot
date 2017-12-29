@@ -1,6 +1,6 @@
-package org.spring.springboot.service;
+package org.spring.springboot.web.service;
 
-import org.spring.springboot.domain.User;
+import org.spring.springboot.web.domain.User;
 
 /**
  * 用户业务接口层

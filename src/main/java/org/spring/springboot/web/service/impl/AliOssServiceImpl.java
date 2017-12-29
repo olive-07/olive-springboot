@@ -1,4 +1,4 @@
-package org.spring.springboot.service.impl;
+package org.spring.springboot.web.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.aliyun.oss.ClientException;
@@ -10,7 +10,7 @@ import com.aliyun.oss.model.PutObjectResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.spring.springboot.config.oss.OssConfig;
-import org.spring.springboot.service.AliOssService;
+import org.spring.springboot.web.service.AliOssService;
 import org.spring.springboot.utils.AliOssUtil;
 import org.spring.springboot.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
